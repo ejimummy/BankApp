@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B31FB8A3-AD77-4094-BE62-DC0C4FD144BD}</ProjectGuid>
+    <ProjectGuid>{7778297D-D2E1-45BD-B841-767196616867}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BankApp</RootNamespace>
-    <AssemblyName>BankApp</AssemblyName>
+    <RootNamespace>BankApplication</RootNamespace>
+    <AssemblyName>BankApplication</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
