@@ -8,13 +8,15 @@ namespace BankApplication
 {
     class Account
     {
+        private static int lastAccountNumber = 0;
+
         #region Properties
         //properties can be written by prop -tab-tab
 
         /// <summary>
         /// unique acount number
         /// </summary>
-        public int AccountNumber { get; set; }
+        public int AccountNumber { get; private set; }
         /// <summary>
         /// Email address associated with the user
         /// </summary>
@@ -31,6 +33,26 @@ namespace BankApplication
         /// Date account was created
         /// </summary>
         public DateTime CreatedDate { get; set; }
+        #endregion
+
+        #region Constructors
+        
+        //can overload for any method
+        public Account()
+        { 
+            AccountNumber = ++lastAccountNumber;
+            CreatedDate = DateTime.UtcNow;
+        }
+
+        public Account(string email) : this()
+        {    
+            EmailAddress = email;
+        }
+
+        public Account(string email, string type) : this(email)
+        {
+            AccountType = type;
+        }
         #endregion
 
         #region Methods

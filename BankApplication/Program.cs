@@ -11,13 +11,21 @@ namespace BankApplication
         static void Main(string[] args)
         {
             //Object, instance of a class, instantiation
-            var account = new Account();
-            account.AccountNumber = 12345;
-            account.EmailAddress = "test.lisa@gmail.com";
-            account.AccountType = "Checking";
+
+            //another way to create the object with an overloading constructor
+            var account = new Account
+            {
+                EmailAddress = "test.test.com",
+                AccountType = "Checking"
+            };
+
             account.Balance = 1000000000;
 
-            Console.WriteLine(account.Balance);
+            Console.WriteLine($"AN: {account.AccountNumber}, Balance: {account.Balance}, EA: {account.EmailAddress}, TA: {account.AccountType}, CD: {account.CreatedDate}");
+
+            var account2 = new Account("testing@test.com");
+            Console.WriteLine($"Email: {account2.EmailAddress}");
+            Console.Read();
         }
     }
 }
