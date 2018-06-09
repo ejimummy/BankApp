@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace BankApplication
 {
+    enum AccountType
+    {
+        Checking,
+        Savings,
+        CD,
+        Loan
+
+    }
     class Account
     {
+        
         private static int lastAccountNumber = 0;
 
         #region Properties
@@ -28,7 +37,7 @@ namespace BankApplication
         /// <summary>
         /// Type of account
         /// </summary>
-        public string AccountType { get; set; }
+        public AccountType AccountType { get; set; }
         /// <summary>
         /// Date account was created
         /// </summary>
